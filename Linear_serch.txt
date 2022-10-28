@@ -1,0 +1,26 @@
+Algorithm Linear_search
+
+VAR :
+
+list : ARRAY_OF integer[5]
+numb, index : integer
+bool := false : boolean
+
+BEGIN
+
+Read(numb)
+
+For i from 0 to list.length-1 step 1 DO
+
+if(numb = list[i]) DO
+index := i
+bool := true
+break
+ENDIF
+
+ENDFOR
+
+if(bool === true) write("le nombre existe dans l'indice" , i)
+else write("le nombre n'existe pas ")
+
+END
