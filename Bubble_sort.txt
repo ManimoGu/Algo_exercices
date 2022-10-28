@@ -1,0 +1,30 @@
+ALGORITHM Bubble_sort
+
+VAR 
+list : ARRAY_OF integer[5]
+i,j : integer
+indice : boolean
+
+BEGIN
+FOR i from 0 to list.length-1 DO
+  indice := false
+FOR j from 0 to list.length-1 DO
+
+if(list[j] > list[j+1]) DO
+tmp := list[j]
+list[j] : = List[j+1]
+list[j] := temp
+
+indice := true
+
+ENDIF
+ENDFOR
+
+if(indice = false) break;
+
+ENDFOR
+
+
+
+
+END
