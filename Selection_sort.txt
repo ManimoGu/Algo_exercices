@@ -1,0 +1,27 @@
+Algorithm Selection_sort 
+
+VAR :
+
+list : ARRAY_OF integer[5]
+
+BEGIN
+
+FOR i from 0 to list.length-1 step 1 DO
+
+FOR j from i+1 to list.length-1 step 1 DO
+
+if(list[j]< list[i] ) DO
+
+tmp := List[i]
+list[i] := list[j]
+list[j] := tmp
+
+ENDIF
+ENDFOR
+
+ENDFOR
+
+write(list)
+
+
+END

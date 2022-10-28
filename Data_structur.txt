@@ -1,0 +1,101 @@
+ALGORITHM STACK_ARRAY
+
+VAR : 
+
+List : STACK 
+nbr := 6 : integer
+pointeur := -1, element , Last : integer
+
+BEGIN
+
+FOR i FROM 0 to 2 Step 1 DO
+
+write("entrez un element")
+Read(element)
+
+if(pointeur < nbr ) DO 
+
+pointeur = pointeur +1
+List.push(element)
+
+ENDIF
+
+ENDFOR
+
+last = List.peek()
+
+write("the last element" , last)
+
+if(List.isEmpty() === false) DO
+last = List.pop()
+pointeur = pointeur-1
+
+ELSE
+write("vous ne pouvez pas supprimer le stack est vide")
+
+END
+
+#############################################################################
+
+ALGORITHM Queue_ARRAY
+
+VAR : 
+List : Queue
+nbr := 6 : integer
+First:= -1 , Last :=1 : integer
+
+BEGIN
+
+write("entrez un element")
+Read(element)
+
+IF(List.isEmpty()) DO 
+
+First := First +1
+Last := Last +1
+
+List.enqueue(element)
+ELSE DO 
+   IF(Last < nbr) DO
+   Last :=  Last +1
+   List.enqueue(element)
+   ELSE
+   Write("La list est rempli")
+   ENDIF
+ENDIF
+
+IF (List.isEmpty() === false)
+List.dequeue()
+First : = First +1
+ELSE
+Write("List est vide")
+
+NBR := List.peek()
+
+
+END
+
+##############################################
+
+ALGORITHM HASH_TABLE
+
+List : HASH_TABLE <integer,string>
+
+BEGIN
+
+write("entrez un nombre")
+Read(element)
+write("entrez un mot")
+Read(element2)
+
+List.insert(1 : "UN")
+List.insert(2 : "Deux")
+List.insert(4 : "Deux")
+List.insert(element : element2)
+
+item := List.get(2) // "Deux"
+
+List.delete(1)
+
+
+END
